@@ -1,1 +1,3 @@
 /setup/sun-resources.xml
+/src/java/hibernate.cfg.xml
+/src/conf/persistence.xml
