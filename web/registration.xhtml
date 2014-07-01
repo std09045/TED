@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Registration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:panelGrid columns="2">
+            <h:form>
+                <h:outputText value="First Name"/>
+                <h:inputText id="firstName" value="#{registerBean.usertoReg.firstName}"/>
+                <h:outputText value="Last Name"/>
+                <h:inputText id="lastName" value="#{registerBean.usertoReg.lastName}"/>
+                <h:outputText value="Email"/>
+                <h:inputText id="email" value="#{registerBean.usertoReg.email}"/>
+                <h:commandButton value="submit" action="#{registerBean.register()}"/>
+            </h:form>
+        </h:panelGrid>
+    </body>
+</html>
