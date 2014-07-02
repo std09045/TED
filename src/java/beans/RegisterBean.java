@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package beans;
 
 import ejbs.RegisterService;
@@ -13,12 +7,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 
-
-
-/**
- *
- * @author Mark
- */
 @ManagedBean
 @Named(value = "registerBean")
 @RequestScoped
@@ -28,9 +16,7 @@ public class RegisterBean {
     @EJB
     private RegisterService registerService;
 
-    /**
-     * Creates a new instance of RegisterBean
-     */
+
     public RegisterBean() {
         usertoReg = new User();
     }
