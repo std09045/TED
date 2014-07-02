@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <title>Registration</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <h:body>
+    <body>
         <h:form>
-            <h:panelGrid columns="2">
-
+            <h:panelGrid id="panel" columns="2">
                 <h:outputText value="First Name"/>
                 <h:inputText id="firstName" value="#{registerBean.usertoReg.firstName}"/>
                 <h:outputText value="Last Name"/>
                 <h:inputText id="lastName" value="#{registerBean.usertoReg.lastName}"/>
                 <h:outputText value="Email"/>
                 <h:inputText id="email" value="#{registerBean.usertoReg.email}"/>
+                <h:outputText value="Role"/>
+                <h:selectOneRadio id="role" value="#{registerBean.usertoReg.role}">
+                 
+                        <f:selectItem id="role1" itemLabel="Seller" itemValue="seller"/>
+                        <f:selectItem id="role2" itemLabel="Buyer" itemValue="buyer"/>
+                        <f:selectItem id="role3" itemLabel="leaser" itemValue="leaser"/>
+                        <f:selectItem id="role4" itemLabel="renter" itemValue="Renter"/>
+              
+                </h:selectOneRadio>
                 <h:commandButton value="submit" action="#{registerBean.register()}"/>
-
             </h:panelGrid>
         </h:form>
-    </h:body>
+    </body>
 </html>

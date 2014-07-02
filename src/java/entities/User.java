@@ -43,6 +43,17 @@ public class User implements Serializable {
     @Size(max = 45)
     @Column(name = "email")
     private String email;
+    @Size(max = 45)
+    @Column(name = "role")
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public User() {
     }
